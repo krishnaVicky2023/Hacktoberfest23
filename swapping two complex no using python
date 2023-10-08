@@ -1,0 +1,14 @@
+def swap_complex_numbers(a, b):
+    temp_real = a.real  # store the real part of a in temp_real.
+    temp_imag = a.imag  # store the imaginary part of a in temp_imag.
+    a = b.real          # store the real part of b in a.
+    a += 1j * b.imag    # store the imaginary part of b in a.
+    b = temp_real + 1j * temp_imag  # store the real and imaginary parts of a in b.
+    return a, b
+ 
+# Example usage
+a = 5.4 + 2.3j
+b = 10.6 + 7.1j
+print("Before swap: a =", a, "b =", b)
+a, b = swap_complex_numbers(a, b)
+print("After swap: a =", a, "b =", b)
